@@ -7,7 +7,9 @@
 	"type": "module",
 	"main": "build/index.js",
 	"scripts": {
+		"build": "tsc -p tsconfig.json",
 		"dev": "tsx src/index.ts",
+		"server:inspect": "DANGEROUSLY_OMIT_AUTH=true npx @modelcontextprotocol/inspector tsx src/index.ts",
 		"format": "npx @biomejs/biome format --write"
 	},
 	"dependencies": {
@@ -16,6 +18,7 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "2.4.15",
+		"@modelcontextprotocol/inspector": "^0.21.2",
 		"@types/node": "^25.6.2",
 		"tsx": "^4.21.0",
 		"typescript": "^6.0.3"
